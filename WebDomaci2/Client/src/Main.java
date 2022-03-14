@@ -4,6 +4,9 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -13,6 +16,7 @@ public class Main {
         Socket socket = null;
         BufferedReader in = null;
         PrintWriter out = null;
+
 
         try {
             socket = new Socket("localhost", PORT);
@@ -34,14 +38,17 @@ public class Main {
                         System.out.println("Username cant be blank");
                         input = scanner.nextLine();
                     }
-                    /*if(clientRun.isFlag()){
-                        System.out.println("Err");
-                        input = scanner.nextLine();
-                        out.println(input);
-                    }*/
                     username = input;
                     out.println(input);
                 } else {
+                    /*if (clientRun.flag = true) {
+                        input = scanner.nextLine();
+                        while (input.length() < 1) {
+                            input = scanner.nextLine();
+                        }
+                        out.println(username);
+                    }
+                    clientRun.flag = false;*/
                     input = scanner.nextLine();
                     while (input.length() < 1) {
                         input = scanner.nextLine();

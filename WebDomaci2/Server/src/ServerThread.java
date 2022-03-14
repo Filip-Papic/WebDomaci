@@ -9,11 +9,17 @@ import java.util.List;
 public class ServerThread extends Thread {
 
     public static List<String> userList = Collections.synchronizedList(new ArrayList<>());
-    public static List<String> history = Collections.synchronizedList(new ArrayList<>());
+    public static List<String> history = Collections.synchronizedList(new ArrayList<>(100));
     private Socket socket;
     private ArrayList<ServerThread> clientList;
-    BufferedReader in;
+    private BufferedReader in;
     private PrintWriter out;
+    private String forbidden = "bad";
+    private String a = "";
+    private String b;
+    private char c;
+    private char[] arr;
+    private String[] splited;
 
     public ServerThread(Socket socket, ArrayList<ServerThread> clientList) {
         this.socket = socket;
@@ -28,8 +34,38 @@ public class ServerThread extends Thread {
 
             while(true) {
                 String fromClient = in.readLine();
-
                 if (fromClient.startsWith(">")) {
+                    if(fromClient.contains("bad")) {
+                        b = "";
+                        splited = fromClient.split("\\s+");
+                        for (String s : splited) {
+                            if(s.contains("bad")) {
+                                arr = s.toCharArray();
+                                for (int i = 1; i < arr.length - 1; i++) {
+                                    arr[i] = '*';
+                                }
+                                s = String.valueOf(arr);
+                            }
+                            b += s + " ";
+                        }
+                        fromClient = b;
+                    }
+
+                    /*String[] splited = fromClient.split("\\s+");
+                    System.out.println(splited);
+                    for (String s : splited) {
+                        if (s.contains(forbidden)) {
+                            s.replace(forbidden , "*");
+
+                        }
+                        fromClient = String.join(" ", s);
+                    }*/
+                    //fromClient = String.join(" ", splited);
+                        /*for (int i = 1; i < fromClient.length() - 1; i++) {
+                            a += "*";
+                            System.out.println(a);
+                        }
+                        fromClient = fromClient.replace(forbidden, a);*/
                     history.add(fromClient);
                     System.out.println("Current history: " + history);
                     for (ServerThread st : clientList) {
@@ -45,7 +81,11 @@ public class ServerThread extends Thread {
                     for (ServerThread st : clientList) {
                         st.out.println(fromClient + " joined the server");
                     }
-                    for(String i : history) {
+                    out.println("Welcome to public chat room!");
+                    if(history.size() > 100){
+                        history.remove(0);
+                    }
+                    for (String i : history) {
                         out.println(i);
                     }
                 }

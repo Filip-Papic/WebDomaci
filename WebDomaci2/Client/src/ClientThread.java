@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class ClientThread implements Runnable {
 
-    //public static boolean flag = false;
-    private boolean flag = false;
+    public static boolean flag = false;
+    //private boolean flag = false;
     private Socket socket;
     private BufferedReader in, in2;
     private PrintWriter out;
@@ -29,18 +29,15 @@ public class ClientThread implements Runnable {
     @Override
     public void run() {
         try {
-            /*status = in.readLine();
-            if(status.startsWith("ERROR")) {
-                System.out.println(status);
-                newUser = scanner.nextLine();
-                out.println(newUser);*/
             while(true) {
                 String response = in.readLine();
-                if(response.startsWith("ERROR")) {
+                /*if (response.startsWith("ERROR")) {
                     flag = true;
-                } else {
                     System.out.println(response);
-                }
+                } else {*/
+                    flag = false;
+                    System.out.println(response);
+
             }
         } catch (IOException e) {
             e.printStackTrace();
