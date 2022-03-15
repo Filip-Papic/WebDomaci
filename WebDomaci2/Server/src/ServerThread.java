@@ -15,9 +15,9 @@ public class ServerThread extends Thread {
     private ArrayList<ServerThread> clientList;
     private BufferedReader in;
     private PrintWriter out;
-    private String forbidden = "bad";
+    private String[] forbidden = {"bad", "bad1", "bad2", "bad3"};
     private String a = "";
-    private String b;
+    private String b, d;
     private String username;
     private char c;
     private char[] arr;
@@ -40,26 +40,28 @@ public class ServerThread extends Thread {
                 if (fromClient.startsWith(">")) {
                     fromClient = fromClient.substring(1);
                     System.out.println(fromClient);
-                    if(fromClient.contains("bad")) {
-                        b = "";
-                        splited = fromClient.split("\\s+");
-                        for (String s : splited) {
-                            if(s.contains("bad")) {
-                                arr = s.toCharArray();
-                                for (int i = 1; i < arr.length - 1; i++) {
-                                    arr[i] = '*';
+                    for(String forbiddenWord : forbidden) {
+                        if (fromClient.contains(forbiddenWord)) {
+                            b = "";
+                            splited = fromClient.split("\\s+");
+                            for (String s : splited) {
+                                if (s.contains(forbiddenWord)) {
+                                    arr = s.toCharArray();
+                                    for (int i = 1; i < arr.length - 1; i++) {
+                                        arr[i] = '*';
+                                    }
+                                    s = String.valueOf(arr);
                                 }
-                                s = String.valueOf(arr);
+                                b += s + " ";
                             }
-                            b += s + " ";
+                            fromClient = b;
                         }
-                        fromClient = b;
                     }
-                    System.out.println("history: " + fromClient);
-                    history.add(username + ": " + fromClient);
+                    d = java.time.LocalDateTime.now() + " - " + username + ": " + fromClient;
+                    history.add(d);
                     System.out.println("Current history: " + history);
                     for (ServerThread st : clientList) {
-                        st.out.println(java.time.LocalDateTime.now() + " - " + username + ": " + fromClient );
+                        st.out.println(d);
                     }
                 } else {
                     while (userList.contains(fromClient)) {
