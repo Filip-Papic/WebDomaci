@@ -30,13 +30,11 @@ public class ClientThread implements Runnable {
     public void run() {
         try {
             while(true) {
-                String response = in.readLine();
-                /*if (response.startsWith("ERROR")) {
+                String response = in.readLine();/*
+                if (response.startsWith("ERROR")) {
                     flag = true;
-                    System.out.println(response);
-                } else {*/
-                    flag = false;
-                    System.out.println(response);
+                }*/
+                System.out.println(response);
 
             }
         } catch (IOException e) {

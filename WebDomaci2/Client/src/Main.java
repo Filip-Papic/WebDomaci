@@ -3,10 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -16,7 +12,7 @@ public class Main {
         Socket socket = null;
         BufferedReader in = null;
         PrintWriter out = null;
-
+        java.util.Date date = new java.util.Date();
 
         try {
             socket = new Socket("localhost", PORT);
@@ -41,19 +37,11 @@ public class Main {
                     username = input;
                     out.println(input);
                 } else {
-                    /*if (clientRun.flag = true) {
-                        input = scanner.nextLine();
-                        while (input.length() < 1) {
-                            input = scanner.nextLine();
-                        }
-                        out.println(username);
-                    }
-                    clientRun.flag = false;*/
                     input = scanner.nextLine();
                     while (input.length() < 1) {
                         input = scanner.nextLine();
                     }
-                    out.println(">" + username + ": " + input);
+                    out.println(">" + input);
                 }
             }
         } catch (Exception e) {
