@@ -18,7 +18,7 @@ public class ServerThread extends Thread {
     private String[] forbidden = {"bad", "bad1", "bad2", "bad3"};
     private String a = "";
     private String b, d;
-    private String username;
+    private String username = "";
     private char c;
     private char[] arr;
     private String[] splited;
@@ -61,7 +61,9 @@ public class ServerThread extends Thread {
                     history.add(d);
                     System.out.println("Current history: " + history);
                     for (ServerThread st : clientList) {
-                        st.out.println(d);
+                        if (st.username.length() > 0) {
+                            st.out.println(d);
+                        }
                     }
                 } else {
                     while (userList.contains(fromClient)) {
