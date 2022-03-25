@@ -1,15 +1,11 @@
 package http;
 
-import com.google.gson.Gson;
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Map;
 
 public class Server {
-
-    public static final int TCP_PORT = 8113;
+    public static final int TCP_PORT = 8081;
 
     public static void main(String[] args) {
 
@@ -24,6 +20,4 @@ public class Server {
         }
 
     }
-
-
 }
