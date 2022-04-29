@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f0cc827-5197-4933-8194-7f077bda004d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+    <list default="true" id="8f0cc827-5197-4933-8194-7f077bda004d" name="Changes" comment="domaci 3 kraj">
       <change beforePath="$PROJECT_DIR$/../WebDomaci1/out/production/WebDomaci1/main/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebDomaci1/out/production/WebDomaci1/main/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebDomaci2/Server/src/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebDomaci2/Server/src/ServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTTP_primer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/NewsletterController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/RequestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/HttpMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Request.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/ServerThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/response/HtmlResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/response/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +12,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="26tFOeK7SWjmZbp48VA2fShgy56" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -41,7 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebDomaci3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MainService" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -52,7 +37,38 @@
       <option name="presentableId" value="Default" />
       <updated>1648234951443</updated>
       <workItem from="1648234951947" duration="19000" />
+      <workItem from="1648235421142" duration="288000" />
+      <workItem from="1648309086697" duration="215000" />
+      <workItem from="1648554123655" duration="440000" />
+      <workItem from="1648732416983" duration="62000" />
+      <workItem from="1649334092343" duration="46000" />
     </task>
+    <task id="LOCAL-00001" summary="domaci 3 kraj">
+      <created>1648235518519</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648235518519</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="domaci 3 kraj" />
+    <option name="LAST_COMMIT_MESSAGE" value="domaci 3 kraj" />
   </component>
 </project>
